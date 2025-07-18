@@ -31,7 +31,13 @@ from pyrogram import Client, filters
 from pyrogram.types import User, Message
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.raw.functions.channels import GetParticipants
-from config import api_id, api_hash, bot_token, auth_users
+from config import Config
+
+api_id = Config.API_ID
+api_hash = Config.API_HASH
+bot_token = Config.BOT_TOKEN
+auth_users = Config.AUTH_USERS
+
 from datetime import datetime
 import time
 from concurrent.futures import ThreadPoolExecutor
