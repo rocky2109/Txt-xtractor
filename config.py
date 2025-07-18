@@ -1,4 +1,9 @@
-api_id = "24473318"
-api_hash = "e7dd0576c5ac0ff8f90971d6bb04c8f5"
-bot_token = "8034069514:AAHUBpzSCq41jPwsJkDbXuEoVC_yCxzyuw0"
-auth_users = [5840594311]
+import os
+
+class Config:
+    API_ID = int(os.getenv("API_ID"))
+    API_HASH = os.getenv("API_HASH")
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
+    
+    # Read AUTH_USERS as a list of integers
+    AUTH_USERS = list(map(int, os.getenv("AUTH_USERS", "").split()))
